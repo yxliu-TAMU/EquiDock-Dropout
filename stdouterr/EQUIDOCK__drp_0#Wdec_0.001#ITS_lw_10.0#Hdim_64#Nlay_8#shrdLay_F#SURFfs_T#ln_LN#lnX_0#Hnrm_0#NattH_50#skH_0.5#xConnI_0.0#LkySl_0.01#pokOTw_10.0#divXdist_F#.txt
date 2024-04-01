@@ -1,0 +1,339 @@
+[2023-11-26 17:45:37.597593] START
+[2023-11-26 17:45:37.603699] 
+
+
+[2023-11-26 17:45:37.607120] # Loading dataset: db5
+[2023-11-26 17:45:37.607586] # Num_worker:0
+[2023-11-26 17:45:39.800821]  Train:203, Valid:25, Test :25
+[2023-11-26 17:45:40.550712] input_edge_feats_dim :  27
+[2023-11-26 17:45:41.212988] Number of parameters = 842,477
+[2023-11-26 17:45:41.320345] 
+
+
+[2023-11-26 17:45:41.320785] # Loading dataset: db5
+[2023-11-26 17:45:41.321204] # Num_worker:0
+[2023-11-26 17:45:41.473149]  Train:203, Valid:25, Test :25
+[2023-11-26 17:45:41.474139] input_edge_feats_dim :  27
+[2023-11-26 17:45:41.475478] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:45:41.475910] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:47:04.020831] [TRAIN] -->  total loss 11817.6367 || lrmsd loss 727.9436 || OT loss 1059.0094 || INTERSC loss 49.9598 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:47:04.021683] [TRAIN] --> epoch 0/10000 || mean/median complex rmsd 20.1614 / 18.2929 || mean/median ligand rmsd 44.9637 / 43.3273 || mean/median sqrt pocket OT loss 32.5424 || intersection loss 49.9598 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:04.024443] [TRAIN] --> epoch 0/10000 || mean/median complex rmsd 20.1614 / 18.2929 || mean/median ligand rmsd 44.9637 / 43.3273 || mean/median sqrt pocket OT loss 32.5424 || intersection loss 49.9598 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:06.677151] [VALIDATION] --> epoch 0/10000 || mean/median complex rmsd 18.6981 / 19.3775 || mean/median ligand rmsd 41.8472 / 40.3282 || mean/median sqrt pocket OT loss 32.6053 || intersection loss 49.9720 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:06.896920] [BEST SO FAR]  db5 || At best epoch 0 we have: best_val_rmsd_median 19.3775, || Current val rmsd_median 19.3775  || Train time: 0:01:25.419976
+
+[2023-11-26 17:47:06.897354] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:47:06.897789] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:47:16.582303] [TRAIN] -->  total loss 11620.5342 || lrmsd loss 745.5043 || OT loss 1037.7920 || INTERSC loss 49.7113 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:47:16.582951] [TRAIN] --> epoch 1/10000 || mean/median complex rmsd 19.2521 / 17.7607 || mean/median ligand rmsd 43.9654 / 42.4133 || mean/median sqrt pocket OT loss 32.2148 || intersection loss 49.7113 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:16.585304] [TRAIN] --> epoch 1/10000 || mean/median complex rmsd 19.2521 / 17.7607 || mean/median ligand rmsd 43.9654 / 42.4133 || mean/median sqrt pocket OT loss 32.2148 || intersection loss 49.7113 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:19.197583] [VALIDATION] --> epoch 1/10000 || mean/median complex rmsd 18.3973 / 19.0906 || mean/median ligand rmsd 41.4854 / 39.8045 || mean/median sqrt pocket OT loss 32.3251 || intersection loss 50.5295 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:19.198743] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:47:19.199669] [BEST SO FAR]  db5 || At best epoch 0 we have: best_val_rmsd_median 19.3775, || Current val rmsd_median 19.0906  || Train time: 0:00:12.301205
+
+[2023-11-26 17:47:19.200457] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:47:19.200874] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:47:28.725512] [TRAIN] -->  total loss 11484.8184 || lrmsd loss 734.6547 || OT loss 1025.4897 || INTERSC loss 49.5263 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:47:28.726174] [TRAIN] --> epoch 2/10000 || mean/median complex rmsd 21.9771 / 22.2516 || mean/median ligand rmsd 48.5337 / 48.5619 || mean/median sqrt pocket OT loss 32.0233 || intersection loss 49.5263 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:28.728347] [TRAIN] --> epoch 2/10000 || mean/median complex rmsd 21.9771 / 22.2516 || mean/median ligand rmsd 48.5337 / 48.5619 || mean/median sqrt pocket OT loss 32.0233 || intersection loss 49.5263 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:31.335071] [VALIDATION] --> epoch 2/10000 || mean/median complex rmsd 18.3964 / 18.6039 || mean/median ligand rmsd 41.5609 / 40.8660 || mean/median sqrt pocket OT loss 31.8629 || intersection loss 49.9974 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:31.396672] [BEST SO FAR]  db5 || At best epoch 2 we have: best_val_rmsd_median 18.6039, || Current val rmsd_median 18.6039  || Train time: 0:00:12.194875
+
+[2023-11-26 17:47:31.397110] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:47:31.397492] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:47:40.865296] [TRAIN] -->  total loss 10949.7041 || lrmsd loss 704.9792 || OT loss 978.1449 || INTERSC loss 46.3277 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:47:40.865932] [TRAIN] --> epoch 3/10000 || mean/median complex rmsd 20.2413 / 20.0249 || mean/median ligand rmsd 43.6334 / 43.3656 || mean/median sqrt pocket OT loss 31.2753 || intersection loss 46.3277 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:40.868110] [TRAIN] --> epoch 3/10000 || mean/median complex rmsd 20.2413 / 20.0249 || mean/median ligand rmsd 43.6334 / 43.3656 || mean/median sqrt pocket OT loss 31.2753 || intersection loss 46.3277 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:43.459967] [VALIDATION] --> epoch 3/10000 || mean/median complex rmsd 17.7501 / 18.2825 || mean/median ligand rmsd 40.9014 / 38.2629 || mean/median sqrt pocket OT loss 31.5246 || intersection loss 45.0863 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:43.461105] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:47:43.462039] [BEST SO FAR]  db5 || At best epoch 2 we have: best_val_rmsd_median 18.6039, || Current val rmsd_median 18.2825  || Train time: 0:00:12.063875
+
+[2023-11-26 17:47:43.462839] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:47:43.463266] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:47:52.932464] [TRAIN] -->  total loss 10501.8652 || lrmsd loss 703.2466 || OT loss 937.0337 || INTERSC loss 42.8283 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:47:52.933141] [TRAIN] --> epoch 4/10000 || mean/median complex rmsd 18.3072 / 16.6061 || mean/median ligand rmsd 41.1391 / 40.0708 || mean/median sqrt pocket OT loss 30.6110 || intersection loss 42.8283 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:52.935271] [TRAIN] --> epoch 4/10000 || mean/median complex rmsd 18.3072 / 16.6061 || mean/median ligand rmsd 41.1391 / 40.0708 || mean/median sqrt pocket OT loss 30.6110 || intersection loss 42.8283 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:55.532412] [VALIDATION] --> epoch 4/10000 || mean/median complex rmsd 17.6134 / 17.6445 || mean/median ligand rmsd 40.4103 / 37.2473 || mean/median sqrt pocket OT loss 31.4136 || intersection loss 42.2059 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:47:55.594156] [BEST SO FAR]  db5 || At best epoch 4 we have: best_val_rmsd_median 17.6445, || Current val rmsd_median 17.6445  || Train time: 0:00:12.129981
+
+[2023-11-26 17:47:55.594644] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:47:55.595049] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:48:05.089484] [TRAIN] -->  total loss 9959.7188 || lrmsd loss 671.9677 || OT loss 886.9589 || INTERSC loss 41.8161 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:48:05.090119] [TRAIN] --> epoch 5/10000 || mean/median complex rmsd 20.4331 / 19.6500 || mean/median ligand rmsd 46.7578 / 45.8334 || mean/median sqrt pocket OT loss 29.7819 || intersection loss 41.8161 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:05.092332] [TRAIN] --> epoch 5/10000 || mean/median complex rmsd 20.4331 / 19.6500 || mean/median ligand rmsd 46.7578 / 45.8334 || mean/median sqrt pocket OT loss 29.7819 || intersection loss 41.8161 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:07.686223] [VALIDATION] --> epoch 5/10000 || mean/median complex rmsd 17.7212 / 17.6126 || mean/median ligand rmsd 39.5371 / 37.4005 || mean/median sqrt pocket OT loss 30.8049 || intersection loss 43.0105 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:07.687351] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:48:07.688314] [BEST SO FAR]  db5 || At best epoch 4 we have: best_val_rmsd_median 17.6445, || Current val rmsd_median 17.6126  || Train time: 0:00:12.092522
+
+[2023-11-26 17:48:07.689144] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:48:07.689556] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:48:17.111046] [TRAIN] -->  total loss 9831.7959 || lrmsd loss 686.4426 || OT loss 875.6124 || INTERSC loss 38.9230 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:48:17.111651] [TRAIN] --> epoch 6/10000 || mean/median complex rmsd 16.7239 / 16.0312 || mean/median ligand rmsd 37.5964 / 37.9810 || mean/median sqrt pocket OT loss 29.5907 || intersection loss 38.9230 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:17.113925] [TRAIN] --> epoch 6/10000 || mean/median complex rmsd 16.7239 / 16.0312 || mean/median ligand rmsd 37.5964 / 37.9810 || mean/median sqrt pocket OT loss 29.5907 || intersection loss 38.9230 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:19.710713] [VALIDATION] --> epoch 6/10000 || mean/median complex rmsd 17.3655 / 16.1376 || mean/median ligand rmsd 38.6676 / 36.0008 || mean/median sqrt pocket OT loss 30.6445 || intersection loss 40.5450 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:19.772420] [BEST SO FAR]  db5 || At best epoch 6 we have: best_val_rmsd_median 16.1376, || Current val rmsd_median 16.1376  || Train time: 0:00:12.081949
+
+[2023-11-26 17:48:19.772852] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:48:19.773232] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:48:29.238604] [TRAIN] -->  total loss 9394.0635 || lrmsd loss 664.7240 || OT loss 831.6224 || INTERSC loss 41.3116 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:48:29.239214] [TRAIN] --> epoch 7/10000 || mean/median complex rmsd 19.1565 / 17.7941 || mean/median ligand rmsd 41.8443 / 36.9811 || mean/median sqrt pocket OT loss 28.8379 || intersection loss 41.3116 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:29.241482] [TRAIN] --> epoch 7/10000 || mean/median complex rmsd 19.1565 / 17.7941 || mean/median ligand rmsd 41.8443 / 36.9811 || mean/median sqrt pocket OT loss 28.8379 || intersection loss 41.3116 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:31.837569] [VALIDATION] --> epoch 7/10000 || mean/median complex rmsd 17.1009 / 15.8760 || mean/median ligand rmsd 38.2932 / 36.0224 || mean/median sqrt pocket OT loss 30.7095 || intersection loss 38.8490 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:31.838737] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:48:31.839663] [BEST SO FAR]  db5 || At best epoch 6 we have: best_val_rmsd_median 16.1376, || Current val rmsd_median 15.8760  || Train time: 0:00:12.065773
+
+[2023-11-26 17:48:31.840465] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:48:31.840893] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:48:41.265782] [TRAIN] -->  total loss 9142.3643 || lrmsd loss 648.7802 || OT loss 811.1077 || INTERSC loss 38.2507 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:48:41.266412] [TRAIN] --> epoch 8/10000 || mean/median complex rmsd 18.2460 / 16.7432 || mean/median ligand rmsd 47.0221 / 38.1575 || mean/median sqrt pocket OT loss 28.4800 || intersection loss 38.2507 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:41.268569] [TRAIN] --> epoch 8/10000 || mean/median complex rmsd 18.2460 / 16.7432 || mean/median ligand rmsd 47.0221 / 38.1575 || mean/median sqrt pocket OT loss 28.4800 || intersection loss 38.2507 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:43.864526] [VALIDATION] --> epoch 8/10000 || mean/median complex rmsd 17.0556 / 15.9274 || mean/median ligand rmsd 37.8923 / 36.1149 || mean/median sqrt pocket OT loss 29.7673 || intersection loss 41.2003 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:43.865635] EarlyStopping counter: 2 out of 500
+[2023-11-26 17:48:43.866532] [BEST SO FAR]  db5 || At best epoch 6 we have: best_val_rmsd_median 16.1376, || Current val rmsd_median 15.9274  || Train time: 0:00:12.024965
+
+[2023-11-26 17:48:43.867329] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:48:43.867735] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:48:53.318382] [TRAIN] -->  total loss 8844.2158 || lrmsd loss 613.8221 || OT loss 785.5327 || INTERSC loss 37.5066 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:48:53.318994] [TRAIN] --> epoch 9/10000 || mean/median complex rmsd 16.6447 / 15.9486 || mean/median ligand rmsd 38.3434 / 34.2802 || mean/median sqrt pocket OT loss 28.0274 || intersection loss 37.5066 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:53.321257] [TRAIN] --> epoch 9/10000 || mean/median complex rmsd 16.6447 / 15.9486 || mean/median ligand rmsd 38.3434 / 34.2802 || mean/median sqrt pocket OT loss 28.0274 || intersection loss 37.5066 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:55.916455] [VALIDATION] --> epoch 9/10000 || mean/median complex rmsd 16.9316 / 15.7369 || mean/median ligand rmsd 37.5541 / 36.1392 || mean/median sqrt pocket OT loss 29.9697 || intersection loss 39.6874 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:48:55.977993] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.7369  || Train time: 0:00:12.109293
+
+[2023-11-26 17:48:55.978442] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:48:55.978850] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:49:05.331705] [TRAIN] -->  total loss 8510.4785 || lrmsd loss 611.2014 || OT loss 753.2234 || INTERSC loss 36.7043 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:49:05.332324] [TRAIN] --> epoch 10/10000 || mean/median complex rmsd 16.5095 / 16.8432 || mean/median ligand rmsd 40.8210 / 36.0408 || mean/median sqrt pocket OT loss 27.4449 || intersection loss 36.7043 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:05.334610] [TRAIN] --> epoch 10/10000 || mean/median complex rmsd 16.5095 / 16.8432 || mean/median ligand rmsd 40.8210 / 36.0408 || mean/median sqrt pocket OT loss 27.4449 || intersection loss 36.7043 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:07.927129] [VALIDATION] --> epoch 10/10000 || mean/median complex rmsd 16.6285 / 15.7196 || mean/median ligand rmsd 36.8569 / 36.2150 || mean/median sqrt pocket OT loss 28.9370 || intersection loss 40.4326 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:07.928287] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:49:07.929233] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.7196  || Train time: 0:00:11.949695
+
+[2023-11-26 17:49:07.930072] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:49:07.930493] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:49:17.404247] [TRAIN] -->  total loss 8281.9004 || lrmsd loss 601.9984 || OT loss 730.9247 || INTERSC loss 37.0655 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:49:17.404852] [TRAIN] --> epoch 11/10000 || mean/median complex rmsd 16.3639 / 17.4241 || mean/median ligand rmsd 39.5218 / 39.3906 || mean/median sqrt pocket OT loss 27.0356 || intersection loss 37.0655 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:17.407132] [TRAIN] --> epoch 11/10000 || mean/median complex rmsd 16.3639 / 17.4241 || mean/median ligand rmsd 39.5218 / 39.3906 || mean/median sqrt pocket OT loss 27.0356 || intersection loss 37.0655 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:20.004122] [VALIDATION] --> epoch 11/10000 || mean/median complex rmsd 16.3567 / 15.6588 || mean/median ligand rmsd 36.7230 / 36.3522 || mean/median sqrt pocket OT loss 30.3268 || intersection loss 33.1856 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:20.005297] EarlyStopping counter: 2 out of 500
+[2023-11-26 17:49:20.006202] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.6588  || Train time: 0:00:12.075051
+
+[2023-11-26 17:49:20.006992] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:49:20.007383] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:49:29.385203] [TRAIN] -->  total loss 7987.6875 || lrmsd loss 595.2337 || OT loss 703.3197 || INTERSC loss 35.9256 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:49:29.385830] [TRAIN] --> epoch 12/10000 || mean/median complex rmsd 16.1681 / 15.4818 || mean/median ligand rmsd 38.8483 / 38.4373 || mean/median sqrt pocket OT loss 26.5202 || intersection loss 35.9256 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:29.388131] [TRAIN] --> epoch 12/10000 || mean/median complex rmsd 16.1681 / 15.4818 || mean/median ligand rmsd 38.8483 / 38.4373 || mean/median sqrt pocket OT loss 26.5202 || intersection loss 35.9256 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:31.980076] [VALIDATION] --> epoch 12/10000 || mean/median complex rmsd 16.3460 / 15.6946 || mean/median ligand rmsd 36.6104 / 35.2659 || mean/median sqrt pocket OT loss 29.5381 || intersection loss 34.1841 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:31.981174] EarlyStopping counter: 3 out of 500
+[2023-11-26 17:49:31.982154] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.6946  || Train time: 0:00:11.974033
+
+[2023-11-26 17:49:31.983027] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:49:31.983446] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:49:41.348758] [TRAIN] -->  total loss 7877.4658 || lrmsd loss 593.6229 || OT loss 693.9869 || INTERSC loss 34.3975 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:49:41.349389] [TRAIN] --> epoch 13/10000 || mean/median complex rmsd 17.5658 / 17.4707 || mean/median ligand rmsd 42.0919 / 40.6363 || mean/median sqrt pocket OT loss 26.3436 || intersection loss 34.3975 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:41.351728] [TRAIN] --> epoch 13/10000 || mean/median complex rmsd 17.5658 / 17.4707 || mean/median ligand rmsd 42.0919 / 40.6363 || mean/median sqrt pocket OT loss 26.3436 || intersection loss 34.3975 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:43.952292] [VALIDATION] --> epoch 13/10000 || mean/median complex rmsd 15.9201 / 15.4308 || mean/median ligand rmsd 35.8478 / 35.0400 || mean/median sqrt pocket OT loss 29.5992 || intersection loss 30.7826 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:43.953427] EarlyStopping counter: 4 out of 500
+[2023-11-26 17:49:43.954374] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.4308  || Train time: 0:00:11.970206
+
+[2023-11-26 17:49:43.955179] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:49:43.955597] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:49:53.381816] [TRAIN] -->  total loss 7809.0967 || lrmsd loss 530.1792 || OT loss 694.2343 || INTERSC loss 33.6575 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:49:53.382433] [TRAIN] --> epoch 14/10000 || mean/median complex rmsd 16.4489 / 16.4229 || mean/median ligand rmsd 39.4798 / 36.2724 || mean/median sqrt pocket OT loss 26.3483 || intersection loss 33.6575 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:53.384702] [TRAIN] --> epoch 14/10000 || mean/median complex rmsd 16.4489 / 16.4229 || mean/median ligand rmsd 39.4798 / 36.2724 || mean/median sqrt pocket OT loss 26.3483 || intersection loss 33.6575 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:55.979041] [VALIDATION] --> epoch 14/10000 || mean/median complex rmsd 16.0673 / 16.3035 || mean/median ligand rmsd 36.8127 / 35.8071 || mean/median sqrt pocket OT loss 29.5253 || intersection loss 33.6389 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:49:55.980225] EarlyStopping counter: 5 out of 500
+[2023-11-26 17:49:55.981183] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 16.3035  || Train time: 0:00:12.024911
+
+[2023-11-26 17:49:55.981992] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:49:55.982415] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:50:05.476845] [TRAIN] -->  total loss 7701.6274 || lrmsd loss 554.1050 || OT loss 682.4393 || INTERSC loss 32.3130 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:50:05.477451] [TRAIN] --> epoch 15/10000 || mean/median complex rmsd 16.0558 / 18.1944 || mean/median ligand rmsd 40.9124 / 40.8872 || mean/median sqrt pocket OT loss 26.1235 || intersection loss 32.3130 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:05.479726] [TRAIN] --> epoch 15/10000 || mean/median complex rmsd 16.0558 / 18.1944 || mean/median ligand rmsd 40.9124 / 40.8872 || mean/median sqrt pocket OT loss 26.1235 || intersection loss 32.3130 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:08.076931] [VALIDATION] --> epoch 15/10000 || mean/median complex rmsd 16.1417 / 16.3917 || mean/median ligand rmsd 36.6519 / 36.2376 || mean/median sqrt pocket OT loss 29.4113 || intersection loss 36.1227 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:08.078065] EarlyStopping counter: 6 out of 500
+[2023-11-26 17:50:08.078859] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 16.3917  || Train time: 0:00:12.095843
+
+[2023-11-26 17:50:08.079510] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:50:08.080083] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:50:17.485074] [TRAIN] -->  total loss 7563.3735 || lrmsd loss 557.3405 || OT loss 666.7643 || INTERSC loss 33.8391 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:50:17.485692] [TRAIN] --> epoch 16/10000 || mean/median complex rmsd 15.6061 / 16.2919 || mean/median ligand rmsd 39.4293 / 38.3736 || mean/median sqrt pocket OT loss 25.8218 || intersection loss 33.8391 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:17.487977] [TRAIN] --> epoch 16/10000 || mean/median complex rmsd 15.6061 / 16.2919 || mean/median ligand rmsd 39.4293 / 38.3736 || mean/median sqrt pocket OT loss 25.8218 || intersection loss 33.8391 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:20.083186] [VALIDATION] --> epoch 16/10000 || mean/median complex rmsd 16.1151 / 15.7646 || mean/median ligand rmsd 37.0898 / 36.7291 || mean/median sqrt pocket OT loss 31.1299 || intersection loss 29.6271 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:20.084364] EarlyStopping counter: 7 out of 500
+[2023-11-26 17:50:20.085336] [BEST SO FAR]  db5 || At best epoch 9 we have: best_val_rmsd_median 15.7369, || Current val rmsd_median 15.7646  || Train time: 0:00:12.004502
+
+[2023-11-26 17:50:20.086161] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:50:20.086589] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:50:29.508138] [TRAIN] -->  total loss 7405.2837 || lrmsd loss 549.0206 || OT loss 654.7505 || INTERSC loss 30.8757 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:50:29.508733] [TRAIN] --> epoch 17/10000 || mean/median complex rmsd 15.2603 / 14.0064 || mean/median ligand rmsd 37.5090 / 35.2284 || mean/median sqrt pocket OT loss 25.5881 || intersection loss 30.8757 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:29.511019] [TRAIN] --> epoch 17/10000 || mean/median complex rmsd 15.2603 / 14.0064 || mean/median ligand rmsd 37.5090 / 35.2284 || mean/median sqrt pocket OT loss 25.5881 || intersection loss 30.8757 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:32.106093] [VALIDATION] --> epoch 17/10000 || mean/median complex rmsd 15.6511 / 14.7273 || mean/median ligand rmsd 35.6959 / 33.5621 || mean/median sqrt pocket OT loss 29.2738 || intersection loss 30.4435 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:32.169835] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 14.7273  || Train time: 0:00:12.082276
+
+[2023-11-26 17:50:32.170294] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:50:32.170684] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:50:41.523097] [TRAIN] -->  total loss 7260.9048 || lrmsd loss 513.7802 || OT loss 643.0715 || INTERSC loss 31.6410 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:50:41.523741] [TRAIN] --> epoch 18/10000 || mean/median complex rmsd 13.0358 / 14.8731 || mean/median ligand rmsd 30.5620 / 30.6502 || mean/median sqrt pocket OT loss 25.3589 || intersection loss 31.6410 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:41.526165] [TRAIN] --> epoch 18/10000 || mean/median complex rmsd 13.0358 / 14.8731 || mean/median ligand rmsd 30.5620 / 30.6502 || mean/median sqrt pocket OT loss 25.3589 || intersection loss 31.6410 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:44.119895] [VALIDATION] --> epoch 18/10000 || mean/median complex rmsd 15.7907 / 16.1922 || mean/median ligand rmsd 36.9862 / 35.6744 || mean/median sqrt pocket OT loss 31.0053 || intersection loss 28.7104 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:44.121071] EarlyStopping counter: 1 out of 500
+[2023-11-26 17:50:44.121996] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 16.1922  || Train time: 0:00:11.950634
+
+[2023-11-26 17:50:44.122823] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:50:44.123260] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:50:53.626656] [TRAIN] -->  total loss 7035.6846 || lrmsd loss 503.1732 || OT loss 623.6243 || INTERSC loss 29.6270 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:50:53.627282] [TRAIN] --> epoch 19/10000 || mean/median complex rmsd 13.2871 / 12.4580 || mean/median ligand rmsd 35.2965 / 32.0387 || mean/median sqrt pocket OT loss 24.9725 || intersection loss 29.6270 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:53.629561] [TRAIN] --> epoch 19/10000 || mean/median complex rmsd 13.2871 / 12.4580 || mean/median ligand rmsd 35.2965 / 32.0387 || mean/median sqrt pocket OT loss 24.9725 || intersection loss 29.6270 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:56.226076] [VALIDATION] --> epoch 19/10000 || mean/median complex rmsd 15.6335 / 14.4545 || mean/median ligand rmsd 36.6239 / 35.8399 || mean/median sqrt pocket OT loss 30.6907 || intersection loss 26.3634 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:50:56.227235] EarlyStopping counter: 2 out of 500
+[2023-11-26 17:50:56.228172] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 14.4545  || Train time: 0:00:12.104233
+
+[2023-11-26 17:50:56.229002] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:50:56.229433] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:51:05.593400] [TRAIN] -->  total loss 7045.2124 || lrmsd loss 488.9686 || OT loss 626.2287 || INTERSC loss 29.3956 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:51:05.594040] [TRAIN] --> epoch 20/10000 || mean/median complex rmsd 13.3646 / 12.7466 || mean/median ligand rmsd 31.3213 / 30.9148 || mean/median sqrt pocket OT loss 25.0246 || intersection loss 29.3956 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:05.596387] [TRAIN] --> epoch 20/10000 || mean/median complex rmsd 13.3646 / 12.7466 || mean/median ligand rmsd 31.3213 / 30.9148 || mean/median sqrt pocket OT loss 25.0246 || intersection loss 29.3956 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:08.187810] [VALIDATION] --> epoch 20/10000 || mean/median complex rmsd 15.6977 / 15.4669 || mean/median ligand rmsd 36.2160 / 35.4079 || mean/median sqrt pocket OT loss 29.6023 || intersection loss 31.0687 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:08.189007] EarlyStopping counter: 3 out of 500
+[2023-11-26 17:51:08.189906] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.4669  || Train time: 0:00:11.959775
+
+[2023-11-26 17:51:08.190711] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:51:08.191148] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:51:17.535122] [TRAIN] -->  total loss 6618.6406 || lrmsd loss 495.0337 || OT loss 584.1497 || INTERSC loss 28.2110 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:51:17.535721] [TRAIN] --> epoch 21/10000 || mean/median complex rmsd 12.9312 / 12.5218 || mean/median ligand rmsd 33.3537 / 32.0475 || mean/median sqrt pocket OT loss 24.1692 || intersection loss 28.2110 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:17.538021] [TRAIN] --> epoch 21/10000 || mean/median complex rmsd 12.9312 / 12.5218 || mean/median ligand rmsd 33.3537 / 32.0475 || mean/median sqrt pocket OT loss 24.1692 || intersection loss 28.2110 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:20.133327] [VALIDATION] --> epoch 21/10000 || mean/median complex rmsd 15.7420 / 16.5276 || mean/median ligand rmsd 36.3590 / 35.6570 || mean/median sqrt pocket OT loss 30.7080 || intersection loss 28.2288 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:20.134493] EarlyStopping counter: 4 out of 500
+[2023-11-26 17:51:20.135424] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 16.5276  || Train time: 0:00:11.943580
+
+[2023-11-26 17:51:20.136227] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:51:20.136642] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:51:29.422704] [TRAIN] -->  total loss 6506.1826 || lrmsd loss 473.8709 || OT loss 575.9988 || INTERSC loss 27.2323 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:51:29.423335] [TRAIN] --> epoch 22/10000 || mean/median complex rmsd 15.3272 / 14.3838 || mean/median ligand rmsd 37.2433 / 33.2631 || mean/median sqrt pocket OT loss 24.0000 || intersection loss 27.2323 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:29.425489] [TRAIN] --> epoch 22/10000 || mean/median complex rmsd 15.3272 / 14.3838 || mean/median ligand rmsd 37.2433 / 33.2631 || mean/median sqrt pocket OT loss 24.0000 || intersection loss 27.2323 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:32.018348] [VALIDATION] --> epoch 22/10000 || mean/median complex rmsd 15.6162 / 15.1848 || mean/median ligand rmsd 36.8822 / 36.9463 || mean/median sqrt pocket OT loss 32.3004 || intersection loss 21.7693 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:32.019506] EarlyStopping counter: 5 out of 500
+[2023-11-26 17:51:32.020407] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.1848  || Train time: 0:00:11.883086
+
+[2023-11-26 17:51:32.021192] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:51:32.021660] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:51:41.474304] [TRAIN] -->  total loss 6332.9717 || lrmsd loss 465.5980 || OT loss 560.5070 || INTERSC loss 26.2305 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:51:41.474918] [TRAIN] --> epoch 23/10000 || mean/median complex rmsd 13.5246 / 12.8270 || mean/median ligand rmsd 34.4757 / 33.7734 || mean/median sqrt pocket OT loss 23.6750 || intersection loss 26.2305 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:41.477145] [TRAIN] --> epoch 23/10000 || mean/median complex rmsd 13.5246 / 12.8270 || mean/median ligand rmsd 34.4757 / 33.7734 || mean/median sqrt pocket OT loss 23.6750 || intersection loss 26.2305 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:44.072219] [VALIDATION] --> epoch 23/10000 || mean/median complex rmsd 16.0665 / 15.3385 || mean/median ligand rmsd 37.4538 / 37.1116 || mean/median sqrt pocket OT loss 30.4155 || intersection loss 29.2710 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:44.073173] EarlyStopping counter: 6 out of 500
+[2023-11-26 17:51:44.074221] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.3385  || Train time: 0:00:12.051840
+
+[2023-11-26 17:51:44.074865] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:51:44.075440] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:51:53.461277] [TRAIN] -->  total loss 6218.5278 || lrmsd loss 446.9830 || OT loss 552.7836 || INTERSC loss 24.3708 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:51:53.461906] [TRAIN] --> epoch 24/10000 || mean/median complex rmsd 11.7509 / 11.5273 || mean/median ligand rmsd 29.5135 / 26.7237 || mean/median sqrt pocket OT loss 23.5114 || intersection loss 24.3708 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:53.464228] [TRAIN] --> epoch 24/10000 || mean/median complex rmsd 11.7509 / 11.5273 || mean/median ligand rmsd 29.5135 / 26.7237 || mean/median sqrt pocket OT loss 23.5114 || intersection loss 24.3708 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:56.058176] [VALIDATION] --> epoch 24/10000 || mean/median complex rmsd 16.0669 / 15.7900 || mean/median ligand rmsd 37.5145 / 36.1883 || mean/median sqrt pocket OT loss 32.3014 || intersection loss 23.9282 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:51:56.059331] EarlyStopping counter: 7 out of 500
+[2023-11-26 17:51:56.060270] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.7900  || Train time: 0:00:11.984105
+
+[2023-11-26 17:51:56.061081] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:51:56.061508] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:52:05.398024] [TRAIN] -->  total loss 6049.9370 || lrmsd loss 451.3646 || OT loss 534.6885 || INTERSC loss 25.1688 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:52:05.398620] [TRAIN] --> epoch 25/10000 || mean/median complex rmsd 12.6299 / 11.6195 || mean/median ligand rmsd 30.1110 / 26.8728 || mean/median sqrt pocket OT loss 23.1233 || intersection loss 25.1688 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:05.400927] [TRAIN] --> epoch 25/10000 || mean/median complex rmsd 12.6299 / 11.6195 || mean/median ligand rmsd 30.1110 / 26.8728 || mean/median sqrt pocket OT loss 23.1233 || intersection loss 25.1688 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:07.996876] [VALIDATION] --> epoch 25/10000 || mean/median complex rmsd 15.8570 / 16.3123 || mean/median ligand rmsd 37.4391 / 36.9795 || mean/median sqrt pocket OT loss 32.3280 || intersection loss 23.7938 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:07.998051] EarlyStopping counter: 8 out of 500
+[2023-11-26 17:52:07.998973] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 16.3123  || Train time: 0:00:11.936793
+
+[2023-11-26 17:52:07.999753] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:52:08.000187] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:52:17.396312] [TRAIN] -->  total loss 5819.9380 || lrmsd loss 457.2028 || OT loss 514.3013 || INTERSC loss 21.9722 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:52:17.396965] [TRAIN] --> epoch 26/10000 || mean/median complex rmsd 12.4902 / 12.0236 || mean/median ligand rmsd 30.7917 / 30.7356 || mean/median sqrt pocket OT loss 22.6782 || intersection loss 21.9722 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:17.399342] [TRAIN] --> epoch 26/10000 || mean/median complex rmsd 12.4902 / 12.0236 || mean/median ligand rmsd 30.7917 / 30.7356 || mean/median sqrt pocket OT loss 22.6782 || intersection loss 21.9722 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:20.002289] [VALIDATION] --> epoch 26/10000 || mean/median complex rmsd 15.8438 / 16.3983 || mean/median ligand rmsd 36.7450 / 36.2399 || mean/median sqrt pocket OT loss 30.2877 || intersection loss 28.9307 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:20.003582] EarlyStopping counter: 9 out of 500
+[2023-11-26 17:52:20.004545] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 16.3983  || Train time: 0:00:12.003640
+
+[2023-11-26 17:52:20.005387] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:52:20.005791] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:52:29.519907] [TRAIN] -->  total loss 6012.2700 || lrmsd loss 435.7208 || OT loss 534.7324 || INTERSC loss 22.9225 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:52:29.520530] [TRAIN] --> epoch 27/10000 || mean/median complex rmsd 11.2895 / 9.9462 || mean/median ligand rmsd 27.6902 / 24.0998 || mean/median sqrt pocket OT loss 23.1243 || intersection loss 22.9225 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:29.522693] [TRAIN] --> epoch 27/10000 || mean/median complex rmsd 11.2895 / 9.9462 || mean/median ligand rmsd 27.6902 / 24.0998 || mean/median sqrt pocket OT loss 23.1243 || intersection loss 22.9225 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:32.117481] [VALIDATION] --> epoch 27/10000 || mean/median complex rmsd 15.8902 / 16.6284 || mean/median ligand rmsd 36.8433 / 38.2126 || mean/median sqrt pocket OT loss 32.0054 || intersection loss 26.1854 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:32.118612] EarlyStopping counter: 10 out of 500
+[2023-11-26 17:52:32.119525] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 16.6284  || Train time: 0:00:12.113021
+
+[2023-11-26 17:52:32.120315] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:52:32.120731] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:52:41.578293] [TRAIN] -->  total loss 5590.4229 || lrmsd loss 445.0129 || OT loss 493.5216 || INTERSC loss 21.0194 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:52:41.578930] [TRAIN] --> epoch 28/10000 || mean/median complex rmsd 12.3221 / 10.9458 || mean/median ligand rmsd 32.0165 / 31.4443 || mean/median sqrt pocket OT loss 22.2153 || intersection loss 21.0194 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:41.581279] [TRAIN] --> epoch 28/10000 || mean/median complex rmsd 12.3221 / 10.9458 || mean/median ligand rmsd 32.0165 / 31.4443 || mean/median sqrt pocket OT loss 22.2153 || intersection loss 21.0194 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:44.176743] [VALIDATION] --> epoch 28/10000 || mean/median complex rmsd 15.9947 / 15.3569 || mean/median ligand rmsd 37.2456 / 36.6369 || mean/median sqrt pocket OT loss 32.2605 || intersection loss 25.9414 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:44.177924] EarlyStopping counter: 11 out of 500
+[2023-11-26 17:52:44.178945] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.3569  || Train time: 0:00:12.057401
+
+[2023-11-26 17:52:44.179836] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:52:44.180290] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:52:53.588333] [TRAIN] -->  total loss 5559.9082 || lrmsd loss 434.8139 || OT loss 490.3580 || INTERSC loss 22.1514 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:52:53.588992] [TRAIN] --> epoch 29/10000 || mean/median complex rmsd 13.1914 / 12.8377 || mean/median ligand rmsd 35.8778 / 33.2637 || mean/median sqrt pocket OT loss 22.1440 || intersection loss 22.1514 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:53.591297] [TRAIN] --> epoch 29/10000 || mean/median complex rmsd 13.1914 / 12.8377 || mean/median ligand rmsd 35.8778 / 33.2637 || mean/median sqrt pocket OT loss 22.1440 || intersection loss 22.1514 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:56.187145] [VALIDATION] --> epoch 29/10000 || mean/median complex rmsd 15.5725 / 15.7310 || mean/median ligand rmsd 36.1527 / 37.0966 || mean/median sqrt pocket OT loss 31.3152 || intersection loss 27.9852 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:52:56.188287] EarlyStopping counter: 12 out of 500
+[2023-11-26 17:52:56.189228] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.7310  || Train time: 0:00:12.008235
+
+[2023-11-26 17:52:56.190003] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:52:56.190433] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:53:05.637828] [TRAIN] -->  total loss 5385.3149 || lrmsd loss 428.5777 || OT loss 474.6219 || INTERSC loss 21.0517 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:53:05.638450] [TRAIN] --> epoch 30/10000 || mean/median complex rmsd 12.3507 / 11.2861 || mean/median ligand rmsd 35.7588 / 30.5637 || mean/median sqrt pocket OT loss 21.7858 || intersection loss 21.0517 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:05.640622] [TRAIN] --> epoch 30/10000 || mean/median complex rmsd 12.3507 / 11.2861 || mean/median ligand rmsd 35.7588 / 30.5637 || mean/median sqrt pocket OT loss 21.7858 || intersection loss 21.0517 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:08.242911] [VALIDATION] --> epoch 30/10000 || mean/median complex rmsd 15.7703 / 15.2405 || mean/median ligand rmsd 37.2933 / 36.3955 || mean/median sqrt pocket OT loss 32.5812 || intersection loss 22.7467 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:08.244052] EarlyStopping counter: 13 out of 500
+[2023-11-26 17:53:08.244958] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.2405  || Train time: 0:00:12.053825
+
+[2023-11-26 17:53:08.245763] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:53:08.246190] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:53:17.484680] [TRAIN] -->  total loss 5251.5181 || lrmsd loss 381.8096 || OT loss 467.1810 || INTERSC loss 19.7899 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:53:17.485309] [TRAIN] --> epoch 31/10000 || mean/median complex rmsd 13.3369 / 14.7419 || mean/median ligand rmsd 34.2063 / 35.8099 || mean/median sqrt pocket OT loss 21.6144 || intersection loss 19.7899 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:17.487465] [TRAIN] --> epoch 31/10000 || mean/median complex rmsd 13.3369 / 14.7419 || mean/median ligand rmsd 34.2063 / 35.8099 || mean/median sqrt pocket OT loss 21.6144 || intersection loss 19.7899 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:20.079316] [VALIDATION] --> epoch 31/10000 || mean/median complex rmsd 15.7615 / 15.2098 || mean/median ligand rmsd 36.7591 / 36.5994 || mean/median sqrt pocket OT loss 31.7349 || intersection loss 26.1749 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:20.080511] EarlyStopping counter: 14 out of 500
+[2023-11-26 17:53:20.081425] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.2098  || Train time: 0:00:11.834541
+
+[2023-11-26 17:53:20.082211] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:53:20.082623] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:53:29.501972] [TRAIN] -->  total loss 5146.4385 || lrmsd loss 403.6017 || OT loss 455.0542 || INTERSC loss 19.2295 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:53:29.502581] [TRAIN] --> epoch 32/10000 || mean/median complex rmsd 13.7058 / 12.2124 || mean/median ligand rmsd 35.1553 / 33.6231 || mean/median sqrt pocket OT loss 21.3320 || intersection loss 19.2295 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:29.504866] [TRAIN] --> epoch 32/10000 || mean/median complex rmsd 13.7058 / 12.2124 || mean/median ligand rmsd 35.1553 / 33.6231 || mean/median sqrt pocket OT loss 21.3320 || intersection loss 19.2295 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:32.098280] [VALIDATION] --> epoch 32/10000 || mean/median complex rmsd 16.0957 / 15.2923 || mean/median ligand rmsd 38.0176 / 36.3896 || mean/median sqrt pocket OT loss 32.3997 || intersection loss 27.8717 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:32.099435] EarlyStopping counter: 15 out of 500
+[2023-11-26 17:53:32.100376] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.2923  || Train time: 0:00:12.017097
+
+[2023-11-26 17:53:32.101203] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:53:32.101623] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:53:41.552074] [TRAIN] -->  total loss 4925.6182 || lrmsd loss 405.3610 || OT loss 433.6183 || INTERSC loss 18.4074 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:53:41.552724] [TRAIN] --> epoch 33/10000 || mean/median complex rmsd 12.2794 / 11.9738 || mean/median ligand rmsd 31.4852 / 31.8838 || mean/median sqrt pocket OT loss 20.8235 || intersection loss 18.4074 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:41.555063] [TRAIN] --> epoch 33/10000 || mean/median complex rmsd 12.2794 / 11.9738 || mean/median ligand rmsd 31.4852 / 31.8838 || mean/median sqrt pocket OT loss 20.8235 || intersection loss 18.4074 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:44.147719] [VALIDATION] --> epoch 33/10000 || mean/median complex rmsd 16.0212 / 15.1963 || mean/median ligand rmsd 38.3540 / 36.9602 || mean/median sqrt pocket OT loss 33.5140 || intersection loss 21.0641 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:44.148909] EarlyStopping counter: 16 out of 500
+[2023-11-26 17:53:44.149744] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.1963  || Train time: 0:00:12.047425
+
+[2023-11-26 17:53:44.150406] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:53:44.150961] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:53:53.421638] [TRAIN] -->  total loss 5006.1436 || lrmsd loss 396.1300 || OT loss 443.4684 || INTERSC loss 17.5329 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:53:53.422252] [TRAIN] --> epoch 34/10000 || mean/median complex rmsd 11.8993 / 11.8197 || mean/median ligand rmsd 31.0423 / 30.5146 || mean/median sqrt pocket OT loss 21.0587 || intersection loss 17.5329 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:53.424473] [TRAIN] --> epoch 34/10000 || mean/median complex rmsd 11.8993 / 11.8197 || mean/median ligand rmsd 31.0423 / 30.5146 || mean/median sqrt pocket OT loss 21.0587 || intersection loss 17.5329 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:56.018124] [VALIDATION] --> epoch 34/10000 || mean/median complex rmsd 15.7860 / 14.8725 || mean/median ligand rmsd 37.4741 / 37.1750 || mean/median sqrt pocket OT loss 32.3503 || intersection loss 28.4822 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:53:56.019259] EarlyStopping counter: 17 out of 500
+[2023-11-26 17:53:56.020143] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 14.8725  || Train time: 0:00:11.868527
+
+[2023-11-26 17:53:56.020922] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:53:56.021347] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:54:05.369379] [TRAIN] -->  total loss 4825.8564 || lrmsd loss 374.3893 || OT loss 426.6872 || INTERSC loss 18.4596 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:54:05.369992] [TRAIN] --> epoch 35/10000 || mean/median complex rmsd 12.7976 / 13.0743 || mean/median ligand rmsd 33.3565 / 30.4800 || mean/median sqrt pocket OT loss 20.6564 || intersection loss 18.4596 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:54:05.372245] [TRAIN] --> epoch 35/10000 || mean/median complex rmsd 12.7976 / 13.0743 || mean/median ligand rmsd 33.3565 / 30.4800 || mean/median sqrt pocket OT loss 20.6564 || intersection loss 18.4596 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:54:07.967617] [VALIDATION] --> epoch 35/10000 || mean/median complex rmsd 15.8863 / 15.3920 || mean/median ligand rmsd 38.1736 / 37.8257 || mean/median sqrt pocket OT loss 32.6547 || intersection loss 23.4686 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:54:07.968745] EarlyStopping counter: 18 out of 500
+[2023-11-26 17:54:07.969712] [BEST SO FAR]  db5 || At best epoch 17 we have: best_val_rmsd_median 14.7273, || Current val rmsd_median 15.3920  || Train time: 0:00:11.947656
+
+[2023-11-26 17:54:07.970514] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 17:54:07.970943] Model name ===>  EQUIDOCK__drp_0#Wdec_0.001#ITS_lw_10.0#Hdim_64#Nlay_8#shrdLay_F#SURFfs_T#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_10.0#divXdist_F#
+[2023-11-26 17:54:17.224716] [TRAIN] -->  total loss 4576.6245 || lrmsd loss 368.4951 || OT loss 403.4966 || INTERSC loss 17.3164 || lr 0.0001000 || num grad clips 21/21
+[2023-11-26 17:54:17.225329] [TRAIN] --> epoch 36/10000 || mean/median complex rmsd 12.1749 / 10.1140 || mean/median ligand rmsd 32.7091 / 30.3840 || mean/median sqrt pocket OT loss 20.0872 || intersection loss 17.3164 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 17:54:17.227606] [TRAIN] --> epoch 36/10000 || mean/median complex rmsd 12.1749 / 10.1140 || mean/median ligand rmsd 32.7091 / 30.3840 || mean/median sqrt pocket OT loss 20.0872 || intersection loss 17.3164 || mean/median receptor rmsd 0.0000 / 0.0000 

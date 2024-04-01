@@ -1,0 +1,26 @@
+[2023-11-26 20:29:04.764057] START
+[2023-11-26 20:29:04.770750] 
+
+
+[2023-11-26 20:29:04.774621] # Loading dataset: db5
+[2023-11-26 20:29:04.775302] # Num_worker:0
+[2023-11-26 20:29:06.856798]  Train:203, Valid:25, Test :25
+[2023-11-26 20:29:07.548464] input_edge_feats_dim :  27
+[2023-11-26 20:29:08.448867] Number of parameters = 677,509
+[2023-11-26 20:29:08.545304] 
+
+
+[2023-11-26 20:29:08.546096] # Loading dataset: db5
+[2023-11-26 20:29:08.546783] # Num_worker:0
+[2023-11-26 20:29:08.677714]  Train:203, Valid:25, Test :25
+[2023-11-26 20:29:08.678693] input_edge_feats_dim :  27
+[2023-11-26 20:29:08.679822] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 20:29:08.680202] Model name ===>  EQUIDOCK__drp_0.03#Wdec_0.0001#ITS_lw_10.0#Hdim_64#Nlay_5#shrdLay_F#SURFfs_F#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_1.0#divXdist_F#
+[2023-11-26 20:30:28.810683] [TRAIN] -->  total loss 2286.0999 || lrmsd loss 745.0966 || OT loss 1041.9498 || INTERSC loss 49.9054 || lr 0.0001000 || num grad clips 0/21
+[2023-11-26 20:30:28.811617] [TRAIN] --> epoch 0/10000 || mean/median complex rmsd 18.4768 / 18.5993 || mean/median ligand rmsd 43.6921 / 45.2311 || mean/median sqrt pocket OT loss 32.2792 || intersection loss 49.9054 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 20:30:28.814503] [TRAIN] --> epoch 0/10000 || mean/median complex rmsd 18.4768 / 18.5993 || mean/median ligand rmsd 43.6921 / 45.2311 || mean/median sqrt pocket OT loss 32.2792 || intersection loss 49.9054 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 20:30:31.229580] [VALIDATION] --> epoch 0/10000 || mean/median complex rmsd 18.3762 / 19.1895 || mean/median ligand rmsd 41.4910 / 40.2777 || mean/median sqrt pocket OT loss 32.7367 || intersection loss 52.2142 || mean/median receptor rmsd 0.0000 / 0.0000 
+[2023-11-26 20:30:31.375452] [BEST SO FAR]  db5 || At best epoch 0 we have: best_val_rmsd_median 19.1895, || Current val rmsd_median 19.1895  || Train time: 0:01:22.694735
+
+[2023-11-26 20:30:31.375902] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-11-26 20:30:31.376359] Model name ===>  EQUIDOCK__drp_0.03#Wdec_0.0001#ITS_lw_10.0#Hdim_64#Nlay_5#shrdLay_F#SURFfs_F#ln_LN#lnX_0#Hnrm_0#NattH_50#skH_0.5#xConnI_0.0#LkySl_0.01#pokOTw_1.0#divXdist_F#

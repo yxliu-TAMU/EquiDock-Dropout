@@ -115,7 +115,11 @@ parser.add_argument('-toy', default=False, action='store_true') ## Train only on
 
 parser.add_argument('-continue_train_model', type=str, default='')
 
-
+parser.add_argument('-drop_connect',default=None, help='Drop connect method for the model: DropConnect, DropEdge, DropNode, None, Dropout', required=False)
+parser.add_argument('-drop_connect_rate',type=float, default=0.0, help='Drop connect rate for the model', required=False)
+parser.add_argument('-drop_message',default=None, help='Drop message method for the model: DropMessage, DropEdge, DropNode, None, Dropout', required=False)
+parser.add_argument('-drop_message_rate',type=float, default=0.0, help='Drop message rate for the model', required=False)
+parser.add_argument('-count',default=None, help='count experiment number', required=False)
 args = parser.parse_args().__dict__
 
 
@@ -208,6 +212,9 @@ def get_model_name(args):
             model_name += params_to_plot[s].strip() + '_' + tostr(args[s.strip()]) + '#'
         else:
             model_name += tostr(args[s.strip()]) + '#'
+    model_name = 'EQUIDOCK__' + "dropout_"+str(args["dropout"]) + "_drop_connect_"+str(args["drop_connect"]) + "_drop_connect_rate_"+str(args["drop_connect_rate"]) + "_drop_message_"+str(args["drop_message"]) + "_drop_message_rate_"+str(args["drop_message_rate"]) + "_num_layers_"+ str(args['iegmn_n_lays'])#
+    if args["toy"]==False:
+        model_name = "dips_"+model_name
     assert len(model_name) <= 255
     return model_name
 ########################################

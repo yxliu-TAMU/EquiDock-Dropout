@@ -15,6 +15,7 @@ from src.utils.early_stop import EarlyStopping
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 import torch.multiprocessing
+import torch
 import random
 
 
@@ -279,7 +280,7 @@ def main(args):
     args['data'] = 'db5'
     args['checkpoint_filename'] = os.path.join(args['checkpoint_dir'], args['data'] + '_model_best.pth')
     args['data_fraction'] = 1.
-    args['patience'] = 500
+    args['patience'] = 250
     args['warmup'] = 1.
     args['split'] = 0
     model = train(args, tb_logger, model, nn.MSELoss(reduction='mean'))
@@ -296,7 +297,7 @@ def train(args, tb_logger, model, loss_fn_coors):
 
 
     train_loader, val_loader, test_loader = get_dataloader(args, log)
-
+    print('patience = ', args['patience'])
     stopper = EarlyStopping(mode='lower', patience=args['patience'], filename=args['checkpoint_filename'], log=log)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args['lr'], weight_decay=args['w_decay'])
@@ -418,4 +419,7 @@ def train(args, tb_logger, model, loss_fn_coors):
 
 
 if __name__ == "__main__":
+    print(args["dropout"])
+    print(args['patience'])
+    print(torch.cuda.get_device_name())
     main(args)

@@ -6,6 +6,28 @@ from torch import nn
 from dgl import function as fn
 from src.utils.graph_norm import GraphNorm
 import sys
+from torch import Tensor
+
+class DropBlock:
+    def __init__(self, dropping_method: str):
+        super(DropBlock, self).__init__()
+        self.dropping_method = dropping_method
+
+    def drop(self, x: Tensor, drop_rate: float = 0):
+        if self.dropping_method == 'DropNode':
+            x = x * torch.bernoulli(torch.ones(x.size(0), 1) - drop_rate).to(x.device)
+            x = x / (1 - drop_rate)
+        elif self.dropping_method == 'DropEdge':
+            edge_reserved_size = int(edge_index.size(1) * (1 - drop_rate))
+            if isinstance(edge_index, SparseTensor):
+                row, col, _ = edge_index.coo()
+                edge_index = torch.stack((row, col))
+            perm = torch.randperm(edge_index.size(1))
+            edge_index = edge_index.t()[perm][:edge_reserved_size].t()
+        elif self.dropping_method == 'Dropout':
+            x = F.dropout(x, drop_rate)
+
+        return x
 
 def get_non_lin(type, negative_slope):
     if type == 'swish':
@@ -114,7 +136,11 @@ class IEGMN_Layer(nn.Module):
         self.out_feats_dim = out_feats_dim
 
         self.all_sigmas_dist = [1.5 ** x for x in range(15)]
-
+        
+        self.drop_connect = args['drop_connect']
+        self.drop_connect_rate = args['drop_connect_rate']
+        self.drop_message = args['drop_message']
+        self.drop_message_rate = args['drop_message_rate']
         # EDGES
         self.edge_mlp = nn.Sequential(
             nn.Linear((h_feats_dim * 2) + input_edge_feats_dim + len(self.all_sigmas_dist), self.out_feats_dim),
@@ -232,10 +258,71 @@ class IEGMN_Layer(nn.Module):
             cat_input_for_msg_receptor = torch.cat((hetero_graph.edges['rr'].data['cat_feat'],
                                                     original_edge_feats_receptor,
                                                     x_rel_mag_receptor), dim=-1)
-
+            #print('cat_input_for_msg_ligand', cat_input_for_msg_ligand.shape)
+            #print('cat_feat', hetero_graph.edges['ll'].data['cat_feat'].shape)
+            if (self.drop_connect in ["DropNode","DropEdge","Dropout","DropConnect"]) and (self.training):
+                try:
+                    cat_input_for_msg_ligand_full = cat_input_for_msg_ligand.reshape(-1,10,cat_input_for_msg_ligand.shape[1])
+                    cat_input_for_msg_receptor_full = cat_input_for_msg_receptor.reshape(-1,10,cat_input_for_msg_receptor.shape[1])
+                    if self.drop_connect == 'DropNode':
+                        mask_ligand = torch.bernoulli(torch.ones(cat_input_for_msg_ligand_full.shape[0]) - self.drop_connect_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(cat_input_for_msg_receptor_full.shape[0]) - self.drop_connect_rate).to(self.device)
+                        cat_input_for_msg_ligand_full = cat_input_for_msg_ligand_full * mask_ligand[:,None,None]
+                        cat_input_for_msg_receptor_full = cat_input_for_msg_receptor_full * mask_receptor[:,None,None]
+                    if self.drop_connect == 'DropEdge':
+                        mask_ligand = torch.bernoulli(torch.ones(cat_input_for_msg_ligand_full.shape[1]) - self.drop_connect_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(cat_input_for_msg_receptor_full.shape[1]) - self.drop_connect_rate).to(self.device)
+                        cat_input_for_msg_ligand_full = cat_input_for_msg_ligand_full * mask_ligand[None,:,None]
+                        cat_input_for_msg_receptor_full = cat_input_for_msg_receptor_full * mask_receptor[None,:,None]
+                    if self.drop_connect == 'Dropout':
+                        mask_ligand = torch.bernoulli(torch.ones(cat_input_for_msg_ligand_full.shape[2]) - self.drop_connect_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(cat_input_for_msg_receptor_full.shape[2]) - self.drop_connect_rate).to(self.device)
+                        cat_input_for_msg_ligand_full = cat_input_for_msg_ligand_full * mask_ligand[None,None,:]
+                        cat_input_for_msg_receptor_full = cat_input_for_msg_receptor_full * mask_receptor[None,None,:]
+                    if self.drop_connect == 'DropConnect':
+                        mask_ligand = torch.bernoulli(torch.ones(cat_input_for_msg_ligand_full.shape) - self.drop_connect_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(cat_input_for_msg_receptor_full.shape) - self.drop_connect_rate).to(self.device)
+                        cat_input_for_msg_ligand_full = cat_input_for_msg_ligand_full * mask_ligand
+                        cat_input_for_msg_receptor_full = cat_input_for_msg_receptor_full * mask_receptor
+                    cat_input_for_msg_ligand = cat_input_for_msg_ligand_full.reshape(-1,cat_input_for_msg_ligand.shape[1])
+                    cat_input_for_msg_receptor = cat_input_for_msg_receptor_full.reshape(-1,cat_input_for_msg_receptor.shape[1])
+                except:
+                    print("one drop connection skipped")
             hetero_graph.edges['ll'].data['msg'] = self.edge_mlp(cat_input_for_msg_ligand)  # m_{i->j}
             hetero_graph.edges['rr'].data['msg'] = self.edge_mlp(cat_input_for_msg_receptor)
-
+            #print(self.drop_message,type(self.drop_message))
+            if (self.drop_message in ["DropNode","DropEdge","Dropout","DropMessage"]) and (self.training):
+                try:
+                    msg_ligand_full = hetero_graph.edges['ll'].data['msg'].reshape(-1,10,hetero_graph.edges['ll'].data['msg'].shape[1])
+                    msg_receptor_full = hetero_graph.edges['rr'].data['msg'].reshape(-1,10,hetero_graph.edges['ll'].data['msg'].shape[1])
+                #print("test")
+                    if self.drop_message == 'DropNode':
+                        mask_ligand = torch.bernoulli(torch.ones(msg_ligand_full.shape[0]) - self.drop_message_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(msg_receptor_full.shape[0]) - self.drop_message_rate).to(self.device)
+                        msg_ligand_full = msg_ligand_full * mask_ligand[:,None,None]
+                        msg_receptor_full = msg_receptor_full * mask_receptor[:,None,None]
+                    if self.drop_message == 'DropEdge':
+                        mask_ligand = torch.bernoulli(torch.ones(msg_ligand_full.shape[1]) - self.drop_message_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(msg_receptor_full.shape[1]) - self.drop_message_rate).to(self.device)
+                        msg_ligand_full = msg_ligand_full * mask_ligand[None,:,None]
+                        msg_receptor_full = msg_receptor_full * mask_receptor[None,:,None]
+                    if self.drop_message == 'Dropout':
+                        mask_ligand = torch.bernoulli(torch.ones(msg_ligand_full.shape[2]) - self.drop_message_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(msg_receptor_full.shape[2]) - self.drop_message_rate).to(self.device)
+                        msg_ligand_full = msg_ligand_full * mask_ligand[None,None,:]
+                        msg_receptor_full = msg_receptor_full * mask_receptor[None,None,:]
+                    if self.drop_message == 'DropMessage':
+                        mask_ligand = torch.bernoulli(torch.ones(msg_ligand_full.shape) - self.drop_connect_rate).to(self.device)
+                        mask_receptor = torch.bernoulli(torch.ones(msg_receptor_full.shape) - self.drop_connect_rate).to(self.device)
+                        msg_ligand_full = msg_ligand_full * mask_ligand
+                        msg_receptor_full = msg_receptor_full * mask_receptor
+                    #print("test2")
+                    hetero_graph.edges['ll'].data['msg'] = msg_ligand_full.reshape(-1,hetero_graph.edges['ll'].data['msg'].shape[1])
+                    hetero_graph.edges['rr'].data['msg'] = msg_receptor_full.reshape(-1,hetero_graph.edges['rr'].data['msg'].shape[1])
+                except:
+                    print("one drop message skipped")
+            #print('hetero_graph.edges[ll].data[msg]', hetero_graph.edges['ll'].data['msg'].shape)
+            #print('hetero_graph.edges[rr].data[msg]', hetero_graph.edges['rr'].data['msg'].shape)
             if self.debug:
                 self.log(torch.max(hetero_graph.edges['ll'].data['msg']), 'data[msg] = m_{i->j} = phi^e(h_i, h_j, f_{i,j}, x_rel_mag_ligand)')
 
@@ -271,17 +358,18 @@ class IEGMN_Layer(nn.Module):
                 self.log(torch.max(hetero_graph.edges['ll'].data['x_moment']), 'data[x_moment] = (x_i - x_j) * \phi^x(m_{i->j})')
 
 
-            hetero_graph.update_all(fn.copy_edge('x_moment', 'm'), fn.mean('m', 'x_update'),
+            hetero_graph.update_all(fn.copy_e('x_moment', 'm'), fn.mean('m', 'x_update'),
                                     etype=('ligand', 'll', 'ligand'))
-            hetero_graph.update_all(fn.copy_edge('x_moment', 'm'), fn.mean('m', 'x_update'),
+            hetero_graph.update_all(fn.copy_e('x_moment', 'm'), fn.mean('m', 'x_update'),
                                     etype=('receptor', 'rr', 'receptor'))
 
 
-            hetero_graph.update_all(fn.copy_edge('msg', 'm'), fn.mean('m', 'aggr_msg'),
+            hetero_graph.update_all(fn.copy_e('msg', 'm'), fn.mean('m', 'aggr_msg'),
                                     etype=('ligand', 'll', 'ligand'))
-            hetero_graph.update_all(fn.copy_edge('msg', 'm'), fn.mean('m', 'aggr_msg'),
+            hetero_graph.update_all(fn.copy_e('msg', 'm'), fn.mean('m', 'aggr_msg'),
                                     etype=('receptor', 'rr', 'receptor'))
-
+            #print('hetero_graph.nodes[ligand].data[aggr_msg]', hetero_graph.nodes['ligand'].data['aggr_msg'].shape[0]/hetero_graph.edges['ll'].data['msg'].shape[0])
+            #print('hetero_graph.nodes[receptor].data[aggr_msg]', hetero_graph.nodes['receptor'].data['aggr_msg'].shape[0]/hetero_graph.edges['rr'].data['msg'].shape[0])
 
             x_final_ligand = self.x_connection_init * orig_coors_ligand + \
                              (1. - self.x_connection_init) * hetero_graph.nodes['ligand'].data['x_now'] + \
@@ -618,7 +706,13 @@ class Rigid_Body_Docking_Net(nn.Module):
         self.log=log
 
         self.device = args['device']
-
+        print("dropout rate", args['dropout'])
+        print("drop_connect rate", args['drop_connect_rate'])
+        print("drop_message rate", args['drop_message_rate'])
+        print("drop_connect", args['drop_connect'])
+        print("drop_message", args['drop_message'])
+        print("iegmns_n_lays", args['iegmn_n_lays'])
+        print('patience', args['patience'])
         self.iegmn_original = IEGMN(args, n_lays=args['iegmn_n_lays'], fine_tune=False, log=log)
         if args['fine_tune']:
             self.iegmn_fine_tune = IEGMN(args, n_lays=2, fine_tune=True, log=log)

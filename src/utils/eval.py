@@ -65,7 +65,9 @@ class Meter_Unbound_Bound(object):
       raise ValueError("Meter_Unbound_Bound: reduction_rmsd mis specified!")
     return ligand_rmsd_summarized, receptor_rmsd_summarized, complex_rmsd_summarized
 
-
+  def no_summarize(self):
+    return self.ligand_rmsd_list, self.receptor_rmsd_list, self.complex_rmsd_list
+  
   def summarize_with_std(self, reduction_rmsd='median'):
     complex_rmsd_array = np.array(self.complex_rmsd_list)
     if reduction_rmsd == 'mean':

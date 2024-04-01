@@ -1,0 +1,48 @@
+import numpy as np
+
+dropout_predictions = np.load('1_dropout_predictions.npy')
+std = np.std(dropout_predictions,axis=1)
+mean = np.mean(dropout_predictions, axis=1)
+shapeness_list = np.zeros((10,10))
+predictions_0 = np.load('0_dropout_predictions.npy')
+predictions_1 = np.load('1_dropout_predictions.npy')
+predictions_2 = np.load('2_dropout_predictions.npy')
+predictions_3 = np.load('3_dropout_predictions.npy')
+predictions_4 = np.load('4_dropout_predictions.npy')
+predictions_5 = np.load('5_dropout_predictions.npy')
+std_list = np.zeros(len(predictions_0))
+for i in range(len(predictions_0)):
+    std_list[i] = np.std([predictions_0[i,:],predictions_1[i,:],predictions_2[i,:],predictions_3[i,:],predictions_4[i,:],predictions_5[i,:]])
+PAvPU = np.zeros((len(predictions_0),3))
+for i in range (6):
+    dropout_new = np.load(str(i)+'_dropout_predictions.npy')
+    mean_new = np.mean(dropout_new, axis=1)
+    correct = (dropout_new<20)
+    variance = np.abs(dropout_new-mean_new[:,None])
+    criterion = variance/std_list[:,None]
+    shapeness_1 = (criterion<1)
+    shapeness_2 = (criterion<2)
+    shapeness_3 = (criterion<3)
+    tc_1 = np.multiply(correct,shapeness_1)
+    tc_2 = np.multiply(correct,shapeness_2)
+    tc_3 = np.multiply(correct,shapeness_3)
+    tc_1 = np.sum(tc_1)
+    print(tc_1)
+    tc_2 = np.sum(tc_2)
+    tc_3 = np.sum(tc_3)
+    fu_1 = np.multiply(np.invert(correct),np.invert(shapeness_1))
+    fu_2 = np.multiply(np.invert(correct),np.invert(shapeness_2))
+    fu_3 = np.multiply(np.invert(correct),np.invert(shapeness_3))
+    fu_1 = np.sum(fu_1)
+    fu_2 = np.sum(fu_2)
+    fu_3 = np.sum(fu_3)
+    print(fu_3)
+    PAvPU[i,0] = (tc_1+fu_1)/(len(predictions_0)*20)
+    PAvPU[i,1] = (tc_2+fu_2)/(len(predictions_0)*20)
+    PAvPU[i,2] = (tc_3+fu_3)/(len(predictions_0)*20)
+    print(PAvPU[i,:])
+
+
+np.save('shapeness_list.npy',shapeness_list)
+np.savetxt("foo.csv", shapeness_list, delimiter=",")
+    
